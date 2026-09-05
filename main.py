@@ -8,14 +8,14 @@ score = 0
 
 plr = plrstates[3]
 map = [
-    "#################################",
-    "#                   #           #",
-    "#    ####                   #   #",
-    "#         ##         #      #   #",
-    "#         #                 #   #",
-    "#         #         ##          #",
-    "#                   #           #",
-    "#################################",
+    "█████████████████████████████████",
+    "█                   █           █",
+    "█    ████                   █   █",
+    "█         ██         █      █   █",
+    "█         █                 █   █",
+    "█         █         ██          █",
+    "█                   █           █",
+    "█████████████████████████████████",
 ]
 wight = len(map[0])
 height= len(map)
@@ -27,7 +27,7 @@ def spawn_coin():
     while True:
         coinplacex = random.randint(1, wight - 2)
         coinplacey = random.randint(1, height - 2)
-        if map[coinplacey][coinplacex] != "#":
+        if map[coinplacey][coinplacex] != "█":
             return coinplacex, coinplacey
 
 coinx, coiny = spawn_coin()
@@ -50,7 +50,7 @@ while True:
     elif keyboard.is_pressed("q"):
         exit()
     
-    if map[ynew][xnew] != "#":
+    if map[ynew][xnew] != "█":
         x,y = xnew, ynew
     
     if x == coinx and y == coiny:
