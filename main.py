@@ -62,6 +62,5 @@ while True:
     grid[coiny][coinx] = coin
     
     output = "\033[H" + "\n".join("".join(row) for row in grid)
-    print(output, end="")
+    print(f"{output}\nScore: {score}", end="")
     time.sleep(0.07)
-    # I'm bi btw
